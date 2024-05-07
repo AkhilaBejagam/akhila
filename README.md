@@ -1,6 +1,7 @@
-##Histogram 
+## Histogram 
 
- 1.Install Following Packages 
+ 1.Install Following Packages
+ 
  ```numpy, opencv, matplotlib```
  
  2.code
