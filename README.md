@@ -56,6 +56,9 @@
   plt.show()
   
   ## Input
+
+  ![nature](https://github.com/AkhilaBejagam/akhila/assets/169047515/06e0e9e9-7cf8-4fc2-9219-e981481176c9)
+
     
   
 
