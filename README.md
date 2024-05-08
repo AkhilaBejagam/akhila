@@ -107,7 +107,7 @@ while(True):
      
       break
    
-   7. vid.release()releases the vedio capture object.freeing the camera resources
+7. vid.release()releases the vedio capture object.freeing the camera resources
         
  vid.release() 
  
