@@ -178,7 +178,7 @@ Current Number 9Previous Number8is 17
  A bounding box, also known as a bounding volume or bounding region, is a geometric shape that encloses or surrounds an object or a group of objects in a digital image.
 
  ## Use of Boundingboxes
- .Allowing machine learning models to identify and localize objects within an image
+ Allowing machine learning models to identify and localize objects within an image
 
 ## Required libraries
 
