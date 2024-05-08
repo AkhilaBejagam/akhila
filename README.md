@@ -285,7 +285,7 @@ def crop_image(image, boxes):
 
 
 
-   ## output 1
+   ## output 1 Draw box
 
    ![full_7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/AkhilaBejagam/akhila/assets/169047515/ff067dbe-9bb7-4e94-8e12-6d896f3f5200)
 
@@ -293,7 +293,7 @@ def crop_image(image, boxes):
 
     
 
-   ## output 2
+   ## output 2 crop image
 
    ![0_7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/AkhilaBejagam/akhila/assets/169047515/cd29b10f-8a2a-4e7f-8617-4c2f3b202013)
 
