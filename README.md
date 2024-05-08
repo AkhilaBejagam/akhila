@@ -1,6 +1,7 @@
-##  Histogram
-
-   Defination: A histogram is a type of chart that shows the frequency distribution of data points across a continuous range of numerical values.
+##  Histogram of an Image
+         An image histogram is a type of histogram that acts as a graphical representation of the tonal distribution in a digital image. It plots the number of pixels for each tonal value. By
+         
+looking at the histogram for a specific image a viewer will be able to judge the entire tonal distribution at a glance.
 
  ## Uses of Histogram
     1. Image Processing
@@ -98,7 +99,7 @@ vid.release()
 cv2.destroyAllWindows()
 ```
 ## print10numbers
-```
+
 num = list(range(10))
 previousNum = 0
 for i in num:
