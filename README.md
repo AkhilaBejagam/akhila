@@ -1,7 +1,7 @@
 ##  Histogram
 
    Defination: A histogram is a type of chart that shows the frequency distribution of data points across a continuous range of numerical values.
-   
+
  ## Uses of Histogram
     1. Image Processing
     
