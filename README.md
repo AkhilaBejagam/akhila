@@ -70,6 +70,18 @@
 
 ## Webcam
 
+A webcam is a video camera that is connected to a computer or other device, typically via a USB port, and is used to capture and transmit video over the internet.
+
+uses of webcam
+
+1.Live Streaming
+
+2.Motion Capture
+
+3.Video Recording
+
+## program
+
 1. import the opencv library
   
 import cv2 
