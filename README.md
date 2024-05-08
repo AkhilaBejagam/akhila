@@ -150,16 +150,40 @@ Current Number 9Previous Number8is 17
        
 
 
-## boundingboxes
-```
-import os
-import csv
-from PIL import Image,ImageDraw
+## Boundingboxes
+ A bounding box, also known as a bounding volume or bounding region, is a geometric shape that encloses or surrounds an object or a group of objects in a digital image.
+
+ ## Use of Boundingboxes
+ .Allowing machine learning models to identify and localize objects within an image
+
+## Required libraries
+
+    os - The os library in Python provides a way to interact with the operating system, allowing you to perform various tasks related to file and directory manipulation, environment variables, and           system information retrieval
+    
+    csv - CSV (Comma Separated Values) is a simple file format used to store tabular data, such as a spreadsheet or database 
+    
+    pil - PIL stands for Python Imaging Library, and it's the original library that enabled Python to deal with images
+    
+1. import libraries
+   
+     import os
+
+     import csv
+
+    from PIL import Image,ImageDraw
+   
+2. Reading file paths
+
 csv_file = "/home/akhila-bejagam/Downloads/7622202030987_bounding_box.csv"
 image_dir = "/home/akhila-bejagam/Downloads/7622202030987"
 output_dir = "/home/akhila-bejagam/Downloads/7622202030987_with_boxes"
+ 
+3. Directory creation
+    
 os.makedirs(output_dir, exist_ok=True)
 
+
+4.specifying draw_boxes,crop _image function
 
 def draw_boxes(image, boxes):
     draw = ImageDraw.Draw(image)
@@ -180,7 +204,8 @@ def crop_image(image, boxes):
         cropped_img = image.crop((left, top, right, bottom))
         cropped_images.append(cropped_img)
     return cropped_images
-
+    
+5. processing csv file
 
 with open(csv_file, 'r') as file:
     csv_reader = csv.DictReader(file)
@@ -195,7 +220,10 @@ with open(csv_file, 'r') as file:
             cropped_img.save(os.path.join(output_dir, f"{i}_{image_name}"))  
         full_image_with_boxes = draw_boxes(image, boxes)
         full_image_with_boxes.save(os.path.join(output_dir, f"full_{image_name}"))
-```
+
+     6.   Images are saved using the save()
+        
+
 
 
 
