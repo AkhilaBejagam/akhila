@@ -172,10 +172,12 @@ Current Number 9Previous Number8is 17
 
     from PIL import Image,ImageDraw
    
-2. Reading file paths
+2. Reading the  paths
 
 csv_file = "/home/akhila-bejagam/Downloads/7622202030987_bounding_box.csv"
+
 image_dir = "/home/akhila-bejagam/Downloads/7622202030987"
+
 output_dir = "/home/akhila-bejagam/Downloads/7622202030987_with_boxes"
  
 3. Directory creation
@@ -186,15 +188,25 @@ os.makedirs(output_dir, exist_ok=True)
 4.specifying draw_boxes,crop _image function
 
 def draw_boxes(image, boxes):
+
     draw = ImageDraw.Draw(image)
+    
     for box in boxes:
+    
         left = int(box['left'])
+        
         top = int(box['top'])
+        
         right = int(box['right'])
+        
         bottom = int(box['bottom'])
+        
         draw.rectangle([left, top, right, bottom], outline="red")
+        
     return image
+    
 def crop_image(image, boxes):
+
     cropped_images = []
     for box in boxes:
         left = int(box['left'])
@@ -207,22 +219,38 @@ def crop_image(image, boxes):
     
 5. processing csv file
 
-with open(csv_file, 'r') as file:
+   with open(csv_file, 'r') as file:
+
     csv_reader = csv.DictReader(file)
+    
     for row in csv_reader:
-        image_name = row['filename']
-        image_path = os.path.join(image_dir, image_name)
-        output_path = os.path.join(output_dir, image_name)
-        image = Image.open(image_path)
-        boxes = [{'left': row['xmin'], 'top': row['ymin'], 'right': row['xmax'], 'bottom': row['ymax']}]
-        cropped_images = crop_image(image, boxes)
+    
+           image_name = row['filename']
+        
+            image_path = os.path.join(image_dir, image_name)
+        
+            output_path = os.path.join(output_dir, image_name)
+        
+            image = Image.open(image_path)
+        
+            boxes = [{'left': row['xmin'], 'top': row['ymin'], 'right': row['xmax'], 'bottom': row['ymax']}]
+        
+            cropped_images = crop_image(image, boxes)
+        
         for i, cropped_img in enumerate(cropped_images):
-            cropped_img.save(os.path.join(output_dir, f"{i}_{image_name}"))  
-        full_image_with_boxes = draw_boxes(image, boxes)
-        full_image_with_boxes.save(os.path.join(output_dir, f"full_{image_name}"))
+        
+          cropped_img.save(os.path.join(output_dir, f"{i}_{image_name}")) 
+            
+          full_image_with_boxes = draw_boxes(image, boxes)
+        
+          full_image_with_boxes.save(os.path.join(output_dir, f"full_{image_name}"))
 
      6.   Images are saved using the save()
-        
+
+
+        ## Input
+
+     
 
 
 
