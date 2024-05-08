@@ -104,6 +104,9 @@ cv2.destroyAllWindows()
 
 ## output
 
+[Screencast from 08-05-24 12:26:32 PM IST.webm](https://github.com/AkhilaBejagam/akhila/assets/169047515/a324b968-9f65-4894-ab9b-65e4706fb10f)
+
+
 
 
 ## print10numbers
