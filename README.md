@@ -15,7 +15,9 @@
   
   pip install numpy opencv-python matplotlib
  
-## importing libraries
+## Example Program
+
+1.import libraries
 
 import numpy as np
 
@@ -23,19 +25,19 @@ import cv2 as cv
 
 from matplotlib import pyplot as plt
 
- Read Image: It reads an image from the specified file path  using OpenCV's imread() function
+2. Read Image: It reads an image from the specified file path  using OpenCV's imread() function
  
 img = cv.imread("/home/akhila-bejagam/Downloads/nature.jpeg")
 
- Write Image :It writes the read image to another location using OpenCV's imwrite() function
+3. Write Image :It writes the read image to another location using OpenCV's imwrite() function
  
 cv.imwrite("/home/akhila-bejagam/Desktop/experiment/n.jpeg",img)
 
- Assertion: It  check if the image is successfully read. If the image is not read (i.e., img is None), it raises an assertion error with the message "file could not be read,check with os.path.exists()".
+4. Assertion: It  check if the image is successfully read. If the image is not read (i.e., img is None), it raises an assertion error with the message "file could not be read,check with os.path.exists()".
  
 assert img is not None, "file could not be read,check with os.path.exists()"
 
- Histogram Calculation and Plotting: It calculates the histogram for each color channel rgb using OpenCV's calcHist() function.
+ 5.Histogram Calculation and Plotting: It calculates the histogram for each color channel rgb using OpenCV's calcHist() function.
  
 color = ('b','g','r')
 
@@ -43,13 +45,13 @@ for i, col in enumerate(color):
 
  histr = cv.calcHist([img],[i],None,[256],[0,256])
  
- The histograms are then plotted using Matplotlib's plot() function
+ 6.The histograms are then plotted using Matplotlib's plot() function
  
 plt.plot(histr,color=col)
 
 plt.xlim([0,256])
 
-Display Histograms: Matplotlib's show() function is used to display the plotted histograms.
+7.Display Histograms: Matplotlib's show() function is used to display the plotted histograms.
 
 plt.show()
   
