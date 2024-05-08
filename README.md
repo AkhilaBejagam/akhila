@@ -250,8 +250,7 @@ def crop_image(image, boxes):
 
         ## Input
 
-
-     ![7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/AkhilaBejagam/akhila/assets/169047515/a57d1983-88a3-41a8-8eab-b9d8a2c8c1b9
+   ![7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/AkhilaBejagam/akhila/assets/169047515/a57d1983-88a3-41a8-8eab-b9d8a2c8c1b9
 
 
    ## out put
