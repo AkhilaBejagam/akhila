@@ -264,6 +264,9 @@ def crop_image(image, boxes):
 
         
    ## input
+
+   ![7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/AkhilaBejagam/akhila/assets/169047515/dd9fea9a-f284-49f3-84d1-d1cc591750a2)
+
    
 
 
