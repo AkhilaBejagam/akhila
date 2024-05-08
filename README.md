@@ -222,7 +222,9 @@ def crop_image(image, boxes):
    with open(csv_file, 'r') as file:
 
     csv_reader = csv.DictReader(file)
-    
+   
+  6. Iterates over each row in the CSV file. For each row:
+  
     for row in csv_reader:
     
            image_name = row['filename']
@@ -245,7 +247,7 @@ def crop_image(image, boxes):
         
           full_image_with_boxes.save(os.path.join(output_dir, f"full_{image_name}"))
 
-     6.   Images are saved using the save()
+       7.  Images are saved using the save()
 
 
         
