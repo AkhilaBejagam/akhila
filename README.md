@@ -68,35 +68,44 @@
     
   
 
-## capturevedio
-```
-# import the opencv library 
+## Webcam
+
+1. import the opencv library
+  
 import cv2 
   
   
-# define a video capture object 
+2. define a video capture object (vid) by calling cv2.VedioCaputure(0)
+
 vid = cv2.VideoCapture(0) 
-  
+ 3. Start an infinite loop (While(True)) to continuously captures frames from vedio 
+ 
 while(True): 
-      
-    # Capture the video frame 
-    # by frame 
-    ret, frame = vid.read() 
-  
-    # Display the resulting frame 
-    cv2.imshow('frame', frame) 
-      
-    # the 'q' button is set as the 
-    # quitting button you may use any 
-    # desired button of your choice 
-    if cv2.waitKey(1) & 0xFF == ord('q'): 
-        break
-  
-# After the loop release the cap object 
-vid.release() 
-# Destroy all the windows 
+
+4. the function vidread() capture a frame from the vedio and returns two values : ret, a boolean indicating wheather a frame was successfully  capyured ,and frame ,the captured frame.
+   
+       ret, frame = vid.read() 
+ 5. cv2.imshow () displays the captured frame in a window named 'frame'.
+          
+       cv2.imshow('frame', frame) 
+6. the loop waits for a key press with cv2.waitKey(1). if the pressed key is q  the loop breaks and the program ends
+       
+      if cv2.waitKey(1) & 0xFF == ord('q'):
+   
+     
+      break
+   
+   7. vid.release()releases the vedio capture object.freeing the camera resources
+        
+ vid.release() 
+ 
 cv2.destroyAllWindows()
-```
+
+
+## output
+
+
+
 ## print10numbers
 Here the program explains about printing of first 10 numbers and in each iteration ,printing the sum of current and previous number
 
