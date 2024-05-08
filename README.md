@@ -101,15 +101,25 @@ cv2.destroyAllWindows()
 Here the program explains about printing of first 10 numbers and in each iteration ,printing the sum of current and previous number
 
 num = list(range(10))
+
        It create a list called num containing numbers from 0 to 9 using the range()
+       
 previousNum = 0
+
          Then, it initializes a variable previousNum to 0.
+         
 for i in num:
+
           Next,it enter in to a for loop where it iterates through each element  i in the list num
+          
     sum = previousNum + i
+    
           Inside the loop, it calculates the sum of the current number i and the previous number previousNum, stores it in a variable called sum,
+          
     print('Current Number '+ str(i) + 'Previous Number' + str(previousNum) + 'is ' + str(sum))
+    
            Then it prints out  that includes the current number, the previous number, and the sum.
+           
     previousNum= i
 
     Finally, it updates the previousNum variable to be equal to the current number i before moving to the next iteration of the loop.
@@ -117,14 +127,23 @@ for i in num:
    ## Output of the program
 
 Current Number 0Previous Number0is 0
+
 Current Number 1Previous Number0is 1
+
 Current Number 2Previous Number1is 3
+
 Current Number 3Previous Number2is 5
+
 Current Number 4Previous Number3is 7
+
 Current Number 5Previous Number4is 9
+
 Current Number 6Previous Number5is 11
+
 Current Number 7Previous Number6is 13
+
 Current Number 8Previous Number7is 15
+
 Current Number 9Previous Number8is 17
    
 
