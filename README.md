@@ -61,6 +61,8 @@
 
   ## output 
 
+  ![histogram](https://github.com/AkhilaBejagam/akhila/assets/169047515/4ea5cadc-be3a-42dc-8892-13cc570e894c)
+
   
 
     
