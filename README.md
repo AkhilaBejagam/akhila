@@ -96,7 +96,7 @@ frame_height = int(video.get(4))
    
 size = (frame_width, frame_height) 
    
-result = cv2.VideoWriter('camera.avi',  
+result = cv2.VideoWriter('cam.avi',  
                          cv2.VideoWriter_fourcc(*'MJPG'), 
                          10, size) 
     
