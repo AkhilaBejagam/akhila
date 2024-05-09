@@ -102,7 +102,7 @@ uses of webcam
  
          print("Error reading video file")
      
- 5. Defining the size ( width & height) of the vedio frame
+ 4. Defining the size ( width & height) of the vedio frame
     
         frame_width = int(video.get(3))
     
@@ -110,18 +110,20 @@ uses of webcam
    
         size = (frame_width, frame_height)
 
-6. The output is saved in filename.avi 
+5. The output is saved in filename.avi 
    
 
     result = cv2.VideoWriter('cam.avi',  
                          cv2.VideoWriter_fourcc(*'MJPG'), 
                          10, size) 
 
-7. Now, here in the while loop it captures each  frames from the video stream until a break condition is met.
+6. Now, here in the while loop it captures each  frames from the video stream until a break condition is met.
     
      while(True): 
 
-    ret, frame = video.read() 
+    ret, frame = video.read()
+   
+ 7. It checks the frames was read successfully
   
     if ret == True:  
   
