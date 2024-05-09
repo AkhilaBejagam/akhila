@@ -80,63 +80,55 @@ uses of webcam
 
 3.Video Recording
 
-## program
+## program    
 
-import cv2
+import cv2 
+  
 
 video = cv2.VideoCapture(0) 
    
-   if (video.isOpened() == False): 
-   
+if (video.isOpened() == False):  
     print("Error reading video file") 
-  
-frame_width = int(video.get(3)) 
 
+frame_width = int(video.get(3)) 
 frame_height = int(video.get(4)) 
    
 size = (frame_width, frame_height) 
    
+
 result = cv2.VideoWriter('cam.avi',  
                          cv2.VideoWriter_fourcc(*'MJPG'), 
                          10, size) 
     
 while(True): 
-
     ret, frame = video.read() 
   
     if ret == True:  
   
-   
+         
         result.write(frame) 
         cv2.imshow('Frame', frame) 
-  
-        
+
         if cv2.waitKey(1) & 0xFF == ord('s'): 
             break
   
-   
     else: 
         break
-   
- video.release()
 
+video.release() 
 result.release() 
     
 cv2.destroyAllWindows() 
    
-print("The video was successfully saved")
-
-
+print("The video was successfully saved") 
 
 ## output
+
 https://github.com/AkhilaBejagam/akhila/assets/169047515/23be11fd-05c0-451c-b273-76caa54a9c44
 
 
-
-
-
-
 ## print10numbers
+
 Here the program explains about printing of first 10 numbers and in each iteration ,printing the sum of current and previous number
 
 num = list(range(10))
