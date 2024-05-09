@@ -82,41 +82,66 @@ uses of webcam
 
 ## program
 
-1. import the opencv library
-  
 import cv2 
   
+   
+# Create an object to read  
+# from camera 
+video = cv2.VideoCapture(0) 
+   
+# We need to check if camera 
+# is opened previously or not 
+if (video.isOpened() == False):  
+    print("Error reading video file") 
   
-2. define a video capture object (vid) by calling cv2.VedioCaputure(0)
-
-vid = cv2.VideoCapture(0) 
- 3. Start an infinite loop (While(True)) to continuously captures frames from vedio 
- 
+# We need to set resolutions. 
+# so, convert them from float to integer. 
+frame_width = int(video.get(3)) 
+frame_height = int(video.get(4)) 
+   
+size = (frame_width, frame_height) 
+   
+# Below VideoWriter object will create 
+# a frame of above defined The output  
+# is stored in 'filename.avi' file. 
+result = cv2.VideoWriter('camera.avi',  
+                         cv2.VideoWriter_fourcc(*'MJPG'), 
+                         10, size) 
+    
 while(True): 
-
-4. the function vidread() capture a frame from the vedio and returns two values : ret, a boolean indicating wheather a frame was successfully  capyured ,and frame ,the captured frame.
+    ret, frame = video.read() 
+  
+    if ret == True:  
+  
+        # Write the frame into the 
+        # file 'filename.avi' 
+        result.write(frame) 
+        cv2.imshow('Frame', frame) 
+  
+        # Press S on keyboard  
+        # to stop the process 
+        if cv2.waitKey(1) & 0xFF == ord('s'): 
+            break
+  
+    # Break the loop 
+    else: 
+        break
+  
+# When everything done, release  
+# the video capture and video  
+# write objects 
+video.release() 
+result.release() 
+    
+# Closes all the frames 
+cv2.destroyAllWindows() 
    
-       ret, frame = vid.read() 
- 5. cv2.imshow () displays the captured frame in a window named 'frame'.
-          
-       cv2.imshow('frame', frame) 
-6. the loop waits for a key press with cv2.waitKey(1). if the pressed key is q  the loop breaks and the program ends
-       
-      if cv2.waitKey(1) & 0xFF == ord('q'):
-   
-     
-      break
-   
-7. vid.release()releases the vedio capture object.freeing the camera resources
-        
- vid.release() 
- 
-cv2.destroyAllWindows()
+print("The video was successfully saved") 
 
 
 ## output
 
-[Screencast from 08-05-24 12:26:32 PM IST.webm](https://github.com/AkhilaBejagam/akhila/assets/169047515/a324b968-9f65-4894-ab9b-65e4706fb10f)
+
 
 
 
