@@ -127,7 +127,8 @@ uses of webcam
   
     if ret == True:  
   
-         
+8.result.write(frame): If a frame was successfully read, this line writes the frame to the output video file using the write() method of the VideoWriter object.
+
         result.write(frame)
    
         cv2.imshow('Frame', frame) 
@@ -141,6 +142,8 @@ uses of webcam
 video.release() 
 
 result.release() 
+
+9. close all the frame
     
 cv2.destroyAllWindows() 
    
