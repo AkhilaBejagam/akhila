@@ -80,33 +80,54 @@ uses of webcam
 
 3.Video Recording
 
+## Required libraries
+
+  open cv
+
 ## program    
 
-import cv2 
-  
+ 1.  imports the OpenCV library, which is a popular library used for computer vision tasks.
 
-video = cv2.VideoCapture(0) 
-   
-if (video.isOpened() == False):  
-    print("Error reading video file") 
+         import cv2
+     
+ 2. cv2.VideoCapture(0):It initializes a video capture object. The argument 0 specifies that the default camera should be used for capturing video. If you have multiple cameras connected,
 
-frame_width = int(video.get(3)) 
-frame_height = int(video.get(4)) 
+        you can specify the index of the camera you want to use 
+
+               video = cv2.VideoCapture(0)
+
+  3. it checks  the video capture object is successfully initialized. If it fails to initialize, it prints an error.
+     
+         if (video.isOpened() == False):  
+ 
+         print("Error reading video file")
+     
+ 5. Defining the size ( width & height) of the vedio frame
+    
+        frame_width = int(video.get(3))
+    
+        frame_height = int(video.get(4)) 
    
-size = (frame_width, frame_height) 
+        size = (frame_width, frame_height)
+
+6. The output is saved in filename.avi 
    
 
-result = cv2.VideoWriter('cam.avi',  
+    result = cv2.VideoWriter('cam.avi',  
                          cv2.VideoWriter_fourcc(*'MJPG'), 
                          10, size) 
+
+7. Now, here in the while loop it captures each  frames from the video stream until a break condition is met.
     
-while(True): 
+     while(True): 
+
     ret, frame = video.read() 
   
     if ret == True:  
   
          
-        result.write(frame) 
+        result.write(frame)
+   
         cv2.imshow('Frame', frame) 
 
         if cv2.waitKey(1) & 0xFF == ord('s'): 
@@ -116,6 +137,7 @@ while(True):
         break
 
 video.release() 
+
 result.release() 
     
 cv2.destroyAllWindows() 
