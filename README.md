@@ -141,9 +141,11 @@ uses of webcam
 
 video.release() 
 
+9.resultrelease(): VideoWriter object, ensuring that the output video file is properly closed.
+
 result.release() 
 
-9. close all the frame
+10. close all the frame
     
 cv2.destroyAllWindows() 
    
