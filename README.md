@@ -153,8 +153,7 @@ print("The video was successfully saved")
 
 ## output
 
-https://github.com/AkhilaBejagam/akhila/assets/169047515/23be11fd-05c0-451c-b273-76caa54a9c44
-
+https://github.com/AkhilaBejagam/akhila/assets/169047515/64f27fe7-3ac8-46cc-ae8d-b9d4f8d876d1
 
 ## print10numbers
 
